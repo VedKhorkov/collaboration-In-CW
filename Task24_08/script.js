@@ -22,3 +22,18 @@ function findShort(s){
 }
 let s = "bitcoin take over the world maybe who knows perhaps"
 console.log(findShort(s)) //3
+
+
+function filterList1(l){
+    let arr = []
+    l.forEach()
+}
+
+
+
+function filterList(l){
+    let func = el => el === Number
+    let num = l.filter(func)
+    return num
+}
+console.log(filterList([1,2,'a','b']),[1,2])
