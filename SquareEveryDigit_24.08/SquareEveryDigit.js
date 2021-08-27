@@ -3,5 +3,10 @@
 // Note: The function accepts an integer and returns an integer
 function squareDigits(num) {
     let numString = num.toString(); /* перевод числа в строку с помощью метода toString */
-    return;
+    let result = []; /* создания массива для записи результатов работы с строчными значениями */
+    for (let i = 0; i < numString.length; i++) {
+        result[i] = numString[i] * numString[i]; /* возводим в квадрат каждое значение и записываем в массив */
+    }
+    return Number(result.join(''));/* с помощью join "склеиваеваем" элементы массива и с помощью Numder переводим строки опять в числа */
 }
+console.log(squareDigit(56)); /* делаем проверку в браузере */
