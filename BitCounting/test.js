@@ -9,10 +9,7 @@ var countBits = function (n) {
     stringN = n.toString(2); // преобразуем число в сторку и сразу в двоичную систему
     for (let i = 0; i < stringN.length; i++) { //задаем массив для подсчета элементов
         sum += +stringN[i]; // суммируем элементы преобразуя строки в числа
-
     }
-
-
     return sum;
 };
 
