@@ -8,19 +8,18 @@
 function disemvowel(str) {
     let commit = [];
     let result = '';
+    const arrayVowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']; // задаем массив глассных
     commit = str.split([,]); // преобразует строку в массив
-    for (let i = 0; i < commit.length; i++) {
-        // if (commit[i] == 'A' || 'E' || 'I' || 'O' || 'U' || 'a' || 'e' || 'i' || 'o' || 'u') {
-        //     delete commit[i];
-        // }
-        if (commit[i] == 'i') {  // вроде работает, но нужно красиво оформить работу с массивом глассных
-            commit[i] = '';
+    for (let i = 0; i < commit.length; i++) {  // сравниваем массив глассных с элементом массива строки тролля
+        for (let y = 0; y < arrayVowels.length; y++) {
+            if (commit[i] === arrayVowels[y]) {
+                commit[i] = '';
+            }
         }
-
         result += commit[i];
-
     }
     console.log(result);
+    str = result;
     return str;
 }
 console.log(disemvowel('for this kata y isnt considered a vowel.'));
