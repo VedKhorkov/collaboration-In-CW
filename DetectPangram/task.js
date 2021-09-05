@@ -5,5 +5,10 @@
 // Given a string, detect whether or not it is a pangram.Return True if it is, 
 // False if not.Ignore numbers and punctuation.
 function isPangram(string) {
-    //...
+    let stringArray = [];
+    stringArray = string.toLowerCase().split([,]); // переводим всю строку в нижний регистр (toLowerCase) 
+    // и преобразует строку в массив (split )
+    console.log(stringArray);
+    return stringArray
 }
+isPangram("Ignore numbers and punctuation.")
