@@ -14,11 +14,8 @@ function isPangram(string) {
         if (result === -1) {
             return false;
         }
-
     }
-
     return res
 }
-
-const a = isPangram("The quick brown fox jumps over the lazy dog")
+const a = isPangram("The quick brown fox jumps over the lazy dog") // проверка кода
 console.log(a);
