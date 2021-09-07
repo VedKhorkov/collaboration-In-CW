@@ -9,12 +9,12 @@ function getMiddle(s) {
         let resultFirst = getMiddleString / 2 - 1;
         let resultSecond = getMiddleString / 2;
         return s.charAt(resultFirst) + s.charAt(resultSecond);
-
     }
+    let resultMiddle = (getMiddleString - 1) / 2; // иначе выводим по другому условию
+    return s.charAt(resultMiddle);
 
-    console.log(getMiddleString); // test
 
 }
 
-// let a = getMiddle('test');
-console.log(getMiddle('test'));
+
+console.log(getMiddle('a'));
