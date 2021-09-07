@@ -9,6 +9,17 @@
 // vowles but one.Also, you won't need to worry about capitals.
 
 function absentVowel(x) {
+    const vowelArray = ['a', 'e', 'i', 'o', 'u'] // сщздаем массив глассных для проверки
+    const arrayX = x.toLowerCase().split([,]);// переводим всю строку в нижний регистр (toLowerCase) и преобразует строку в массив (split )
+    console.log(arrayX); // testing
+    for (let i = 0; i < vowelArray.length; i++) {
+        let result = arrayX.indexOf(vowelArray[i]); // проверяем массив arrayX(заданный ) на наличие элементов из массива vowelArray
+        if (result === -1) {
+            return i; // если не нашли элемент с i индексом - возвращаем значение
+        }
+    }
 
+    return false;
 }
-
+const a = absentVowel("Bb Smith sent us six neatly arranged range bicycles");
+console.log(a);
