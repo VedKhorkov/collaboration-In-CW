@@ -13,5 +13,17 @@
 // Jaden - Cased: "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
 String.prototype.toJadenCase = function () {
-    //...
+    let word = this.split(' ');
+    console.log(word);
+    for (let i = 0; i < word.length; i++) {
+        word[i] = word[i].charAt(0).toUpperCase() + word[i].substring(1);
+    }
+    return word.join(' ').trim();
 };
+console.log("How can mirrors be real if our eyes aren't real".toJadenCase());
+
+
+
+// String.prototype.toJadenCase = function () {
+//     //...
+// };
