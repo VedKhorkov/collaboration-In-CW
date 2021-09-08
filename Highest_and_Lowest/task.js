@@ -1,6 +1,9 @@
 
 function highAndLow(numbers) {
-    const numbersArray = numbers.slipt([,])
-    console.log(numbersArray);// test
+    // необходимо строку перевести в массив с сохранением знакака перед числом
+    let numbersArray = numbers.split(' ')
+    // console.log(numbersArray);
+    return String(Math.max(...numbersArray)) + ' ' + String(Math.min(...numbersArray))
+
 }
-console.log(highAndLow("1 2 3 4 5"));
+console.log(highAndLow("1 2 3 4 5 -9"));
