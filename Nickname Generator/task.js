@@ -20,6 +20,20 @@
 // Input will always be a string.
 // Input will always have the first letter capitalised and the rest lowercase(e.g.Sam).
 // The input can be modified
+
 function nicknameGenerator(name) {
-    //code goes here
+
+    const vowelArray = ['a', 'e', 'i', 'o', 'u'] // создаем массив глассных для проверки
+    const nameArray = name.split([]);
+    if (name.length < 4) {
+        return "Error: Name too short"; // проверяем чтобы не меньше трех знаков
+    }
+    for (let i = 0; i < vowelArray.length; i++) {
+        if (nameArray[2] == vowelArray[i]) {
+            return name.slice(0, 4)
+        }
+    }
+    return name.slice(0, 3)
+
 }
+console.log(nicknameGenerator('Gregorian'));
