@@ -11,18 +11,37 @@
 // these handshakes(a pair of farmers handshake only once).
 
 function getParticipants(handshakes) {
-    let sum = Number(handshakes) - 1;
+    let sum = handshakes;
     let counter = 0;
-    let result = 0;
-    while (result < sum) {
-        counter = counter + 1
-        console.log('counter=', counter);
-        result = result + (counter - 1)
-        console.log('result=', result);
+    let iMan = 1;
+    let result;
+    let discr;
+    // while (result < sum) {
+    //     counter = counter + 1
+    //     console.log('counter=', counter);
+    //     result = result + (counter - 1)
+    //     console.log('result=', result);
+    // }
+    // result = iMan - 1;
+    // counter = result - iMan;
+    // if (counter == sum) {
+    //     console.log(result);
+    // }
+    // iMan = iMan + 1
 
+    // return result;
 
-    }
+    // while (counter != sum) { // 0 != 1
+    //     result = iMan - 1    //  1-1 = 0 result
+    //     counter = result + iMan; // 0+1 =1
+    //     iMan = iMan + 1      //  1+1 = 2 iMan
+
+    // }
+    // return result;
+    discr = 1 + 8 * sum;
+    console.log(discr);
+    result = (1 + Math.sqrt(discr)) / 2;
+    console.log(Math.sqrt(discr));
     return result;
-
 }
-console.log(getParticipants(3));
+console.log(getParticipants(6));
