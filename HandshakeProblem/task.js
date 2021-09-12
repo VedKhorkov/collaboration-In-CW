@@ -11,7 +11,7 @@
 // these handshakes(a pair of farmers handshake only once).
 
 function getParticipants(handshakes) {
-    let sum = Number(handshakes);
+    let sum = Number(handshakes) - 1;
     let counter = 0;
     let result = 0;
     while (result < sum) {
@@ -25,4 +25,4 @@ function getParticipants(handshakes) {
     return result;
 
 }
-console.log(getParticipants(1));
+console.log(getParticipants(3));
