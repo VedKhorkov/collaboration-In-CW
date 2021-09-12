@@ -12,15 +12,17 @@
 
 function getParticipants(handshakes) {
     let sum = Number(handshakes);
-    console.log(sum);
-
     let counter = 0;
     let result = 0;
     while (result < sum) {
-        result = result + counter
         counter = counter + 1
+        console.log('counter=', counter);
+        result = result + (counter - 1)
+        console.log('result=', result);
+
+
     }
     return result;
 
 }
-console.log(getParticipants(0));
+console.log(getParticipants(1));
